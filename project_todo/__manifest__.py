@@ -13,6 +13,7 @@
     ],
     "data": [
         # 'data/todo_data.xml',
+        'data/server_actions.xml',
         'views/templates.xml',
         # 'security/ir.model.access.csv',
     ],

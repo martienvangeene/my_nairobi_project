@@ -15,3 +15,10 @@ class ProjectTodo(models.Model):
         string='type Of Todo', 
         comodel_name='project.todo.type')
 
+    @api.multi
+    def server_action_was_here(self):
+        for this in self:
+            this.write(
+                {'text_todo': '!!!'.join(this.text_todo, 'A server Action Was here')})
+
+
