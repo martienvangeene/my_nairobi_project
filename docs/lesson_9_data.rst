@@ -217,6 +217,7 @@ We must ensure we are not breaking code, by , if necessary looping explictly the
 ensure_one()
 ------------
 
+utility provided by framework will raise error if recordset is of cardinality not 1.
 
 
 
