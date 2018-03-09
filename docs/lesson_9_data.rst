@@ -35,7 +35,6 @@ of course this is possible let's review the structure of how odoo
 
    |Views - MENUES| ------- | ODOO ORM - VIEW PARSER| ----- | JAVASCRIPT "Backend" renderer
 
-
 THe more button is one of such places where odoo allows us to add commands, and it is a standard feature in odoo. We will find automatically (injected by ORM) server actions related to the model of the current view.
 
 here are the shortcuts the client understands
@@ -47,6 +46,9 @@ there is an automatic addition HERE:
 
 https://github.com/OCA/OCB/blob/10.0/odoo/addons/base/ir/ir_actions.py#762
 
+
+ANd here is the complete list of "Action Slots"
+https://github.com/OCA/OCB/blob/10.0/odoo/addons/base/ir/ir_values.py#L15
 
 
 
