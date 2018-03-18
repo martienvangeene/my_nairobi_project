@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # © 2018 Therp BV <https://therp.nl>
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
+import datetime
 from openerp import api, fields, models
 
 
@@ -36,7 +37,7 @@ class ProjectTodo(models.Model):
     def _inverse_days_left(self):
         today = fields.Date.from_string(fields.Date.today())
         for this in self:
-            d = today - timedelta(days=this.days_left)
+            d = today - datetime.timedelta(days=this.days_left)
             this.deadline = fields.Date.to_string(d)
 
     def _compute_is_urgent(self):
@@ -65,3 +66,9 @@ class ProjectTodo(models.Model):
         """returns all todos with importance >10"""
         return self.env['project.todo'].search([
             ('todo_type.importance', '>', 10)])
+
+    # Print report Icon -  form view
+    @api.multi
+    def print_todo(self):
+        return self.env['report'].get_action(
+            self, 'project_todo.report_project_todo')

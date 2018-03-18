@@ -26,6 +26,9 @@
 		<field name="model">project.todo</field>
 		<field name="arch" type="xml">
 			<form>
+				 <header>
+        			<button name="print_todo" type="object" string="Print Todo" class="oe_highlight"/>
+				 </header>
 				<group>
 					<field name="name" />
 					<field name="user" />
@@ -43,7 +46,7 @@
 	</record>
 
 	<act_window id="show_todo_list"
-		name="todos"
+		name="Todos"
 		res_model="project.todo"
 		view_mode="list,form"
 		/>
@@ -52,5 +55,14 @@
 		parent="project.menu_main_pm" 
 		action="show_todo_list"		
 		/>
+
+	<report
+		id="custom_report_report_project_todo"
+		model="project.todo"
+		string="My Todo List"
+		report_type="qweb-pdf"
+		name="project_todo.report_project_todo"
+		file="project_todo.report_project_todo"
+	/>
 
 </odoo>

@@ -15,6 +15,7 @@
         # 'data/todo_data.xml',
         'data/server_actions.xml',
         'views/templates.xml',
+        'report/project_todo_report.xml',
         # 'security/ir.model.access.csv',
     ],
     "qweb": [

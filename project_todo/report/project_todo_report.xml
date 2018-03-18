@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="report_project_todo">
+    <t t-call="report.external_layout">
+    	<t t-foreach="docs" t-as="o">
+        	<div class="page">
+            <div class="row">
+                <div class="row mt32 mb32">
+                <div class="col-xs-6" t-if="o.name">
+                    <strong>Description:</strong>
+                    <span t-field="o.name"/>
+                </div>
+                <div class="col-xs-6">
+                    <strong>Deadline:</strong>
+                    <span t-field="o.deadline"/>
+                </div>
+				</div>
+            </div>
+        </div>
+		</t>
+    </t>
+</template>
+</odoo>
