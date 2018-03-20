@@ -10,12 +10,15 @@
     "summary": "All the projects I need to do",
     "depends": [
         'project',
+        'sale',
     ],
     "data": [
         # 'data/todo_data.xml',
         'data/server_actions.xml',
         'views/templates.xml',
+        'views/sale_order.xml',
         'report/project_todo_report.xml',
+        'report/sale_order_report.xml',
         # 'security/ir.model.access.csv',
     ],
     "qweb": [

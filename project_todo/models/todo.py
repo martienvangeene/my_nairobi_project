@@ -22,6 +22,7 @@ class ProjectTodo(models.Model):
     )
     is_urgent = fields.Boolean(compute='_compute_is_urgent')
     todo_type_importance = fields.Integer(related='todo_type.importance',  readonly=True)
+    project = fields.Many2one('project.project')
 
     @api.depends('deadline')
     def _compute_days_left(self):

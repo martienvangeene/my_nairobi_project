@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+    <template id="report_saleorder_todo" inherit_id="sale.report_saleorder_document">
+
+      <xpath expr="//div[@id='informations']/div[@t-if='doc.date_order']" position="after">
+        <div class="col-xs-5ths">
+          <strong>Delivery date:</strong>
+          <p t-field="doc.delivery_date"/>
+        </div>
+      </xpath>
+
+    </template>
+  </data>
+</openerp>

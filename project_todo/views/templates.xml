@@ -26,9 +26,6 @@
 		<field name="model">project.todo</field>
 		<field name="arch" type="xml">
 			<form>
-				 <header>
-        			<button name="print_todo" type="object" string="Print Todo" class="oe_highlight"/>
-				 </header>
 				<group>
 					<field name="name" />
 					<field name="user" />
@@ -40,6 +37,7 @@
 				</group>
 				<group>
 					<field name="text_todo" />
+					<field name="project"/>
 				</group>
 			</form>
 		</field>
