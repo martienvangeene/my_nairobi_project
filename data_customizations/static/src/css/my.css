@@ -1,0 +1,21 @@
+@charset "utf-8";
+.openerp .customer_asset_kanban_left {
+  display: inline-block;
+}
+
+.openerp .customer_asset_type_kanban_left {
+  display: inline-block;
+}
+
+#oe_main_menu_navbar.navbar {
+  background-color: red !important;
+}
+
+.oe_logo {
+  background-image: url('/testserver/static/src/img/testserver.jpg') !important;
+  background-size: cover !important;
+}
+
+.oe_logo img {
+  visibility: hidden !important;
+}

@@ -1,0 +1,18 @@
+<odoo>
+<record id="res_partner_inherited" model="ir.ui.view">
+            <field name="name">res.partner.new.page.inherited</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="res_partner_lucky_day_tab" />
+            <field name="arch" type="xml">
+		
+		<xpath expr="//page[@name] = 'sales_purchases'" position="after">
+			<field name="know_person", string="Do you know this person well?"/>
+ 			<field name="meeting_place",string="Where did you meet?"/>
+      			<field name="like_person", string="Do you like this person?"
+			<field name="my_lucky_day", string="Lucky Day"
+		</xpath>
+
+	</field>
+</record>
+
+</odoo>
